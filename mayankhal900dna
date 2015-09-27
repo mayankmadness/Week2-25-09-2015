@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{ int a,i;
+printf("enter the length of dna strand");
+scanf("%d",&a);
+char dna[a],dna2[a];
+printf("enter the dna strand");
+for( i=0;i<a;i++)
+scanf(" %c",&dna[i]);
+for(i=0;i<a;i++)
+{ switch(dna[i])
+{ case 'T' : dna2[i]='A';
+               break;
+ case 'A' : dna2[i]='T';
+               break;
+ case 'G' : dna2[i]='C';
+               break;
+ case 'C' : dna2[i]='G';
+               break;
+ case 't' : dna2[i]='A';
+			   dna[i]='T';
+               break;
+ case 'a' : dna2[i]='T';
+			   dna[i]='A';
+               break;
+ case 'g' : dna2[i]='C';
+			   dna[i]='G';
+			break;  
+case 'c' : dna2[i]='G';
+			dna[i]='C';
+               break;            
+default : printf("not correct base");
+}
+}
+for(i=0;i<a;i++)
+printf("%c ",dna[i]);
+printf("\n");
+for(i=0;i<a;i++)
+printf("%c ",dna2[i]);
+}
